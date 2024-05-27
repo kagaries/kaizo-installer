@@ -17,6 +17,5 @@
 !/README.md
 !/settings.gradle
 !/.editorconfig
-/src/main/resources/
 /checkstyle.xml
 /crowdin.yml
