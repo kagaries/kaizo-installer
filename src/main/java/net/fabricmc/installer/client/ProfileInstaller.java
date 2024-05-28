@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 
 import mjson.Json;
 
+import net.fabricmc.installer.Main;
 import net.fabricmc.installer.util.Reference;
 import net.fabricmc.installer.util.Utils;
 

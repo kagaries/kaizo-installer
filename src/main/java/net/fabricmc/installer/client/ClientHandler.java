@@ -103,12 +103,12 @@ public class ClientHandler extends Handler {
 					}
 				}
 
-				InputStream zipInputStream = Main.class.getClassLoader().getResourceAsStream("1.20.2_minecraft_kaizo_edition_013.zip");
+				InputStream zipInputStream = Main.class.getClassLoader().getResourceAsStream("1.20.2_minecraft_kaizo_edition_013_A.zip");
 				Path zipDir = mcPath.resolve("versions");
 
 				Files.createDirectories(zipDir);
 
-				String zipFileName = "1.20.2_minecraft_kaizo_edition_013.zip";
+				String zipFileName = "1.20.2_minecraft_kaizo_edition_013_A.zip";
 
 				Path zipFilePath = zipDir.resolve(zipFileName);
 

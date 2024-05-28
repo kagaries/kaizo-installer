@@ -30,7 +30,7 @@ import net.fabricmc.installer.util.OperatingSystem;
 
 public class Main {
 	public static final String MINECRAFT_VERSION = "1.20.2";
-	public static final LoaderVersion LOADER_VERSION = new LoaderVersion("0.13");
+	public static final LoaderVersion LOADER_VERSION = new LoaderVersion("0.13-A");
 	public static MetaHandler GAME_VERSION_META;
 	public static MetaHandler LOADER_META;
 
@@ -45,6 +45,7 @@ public class Main {
 		System.out.println("Loading Fabric Installer: " + Main.class.getPackage().getImplementationVersion());
 
 		HANDLERS.add(new ClientHandler());
+		//HANDLERS.add(new ServerHandler());
 
 		ArgumentParser argumentParser = ArgumentParser.create(args);
 		String command = argumentParser.getCommand().orElse(null);
