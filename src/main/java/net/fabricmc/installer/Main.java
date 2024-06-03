@@ -30,7 +30,7 @@ import net.fabricmc.installer.util.OperatingSystem;
 
 public class Main {
 	public static final String MINECRAFT_VERSION = "1.20.2";
-	public static final LoaderVersion LOADER_VERSION = new LoaderVersion("0.13-B");
+	public static final LoaderVersion LOADER_VERSION = new LoaderVersion("0.14");
 	public static MetaHandler GAME_VERSION_META;
 	public static MetaHandler LOADER_META;
 
