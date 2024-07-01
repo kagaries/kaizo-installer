@@ -1,2 +1,2 @@
-# fabric-installer
-An Installer for Fabric
+# kaizo-installer
+An Installer for Kaizo Edition
