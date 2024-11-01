@@ -103,12 +103,13 @@ public class ClientHandler extends Handler {
 					}
 				}
 
-				InputStream zipInputStream = Main.class.getClassLoader().getResourceAsStream("1.20.2_minecraft_kaizo_edition_014.zip");
+				InputStream zipInputStream = Main.class.getClassLoader().getResourceAsStream(Main.CLIENT_ZIP_NAME + "-" + Main.LOADER_VERSION.name + ".zip");
+				System.out.println(Main.CLIENT_ZIP_NAME + "-" + Main.LOADER_VERSION.name);
 				Path zipDir = mcPath.resolve("versions");
 
 				Files.createDirectories(zipDir);
 
-				String zipFileName = "1.20.2_minecraft_kaizo_edition_014.zip";
+				String zipFileName = Main.CLIENT_ZIP_NAME + "-" + Main.LOADER_VERSION.name + ".zip";
 
 				Path zipFilePath = zipDir.resolve(zipFileName);
 
@@ -121,6 +122,8 @@ public class ClientHandler extends Handler {
 				}
 
 				profileInstaller.setupProfile(profileName, gameVersion, launcherType);
+
+				Files.delete(zipFilePath);
 
 				SwingUtilities.invokeLater(() -> showInstalledMessage(loaderVersion.name, gameVersion, mcPath.resolve("mods")));
 			} catch (Exception e) {

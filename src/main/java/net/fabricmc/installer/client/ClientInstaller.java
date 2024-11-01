@@ -82,7 +82,7 @@ public class ClientInstaller {
 
 		// Get the name of the ZIP file without extension
 		String zipFileName = zipFilePath.getFileName().toString().replaceFirst("[.][^.]+$", "");
-
+		System.out.println(zipFileName);
 		// Create the profile directory based on the ZIP file name
 		Path versionsDir = mcDir.resolve("versions");
 		Path profileDir = versionsDir.resolve(zipFileName);

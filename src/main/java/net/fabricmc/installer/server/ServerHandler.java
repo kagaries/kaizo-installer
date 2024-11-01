@@ -58,17 +58,20 @@ public class ServerHandler extends Handler {
 
 		new Thread(() -> {
 			try {
-				InputStream zipInputStream = Main.class.getClassLoader().getResourceAsStream("1.20.2_minecraft_kaizo_edition_013_server.zip");
+				InputStream zipInputStream = Main.class.getClassLoader().getResourceAsStream(Main.SERVER_ZIP_NAME + "-" + loaderVersion.name + ".zip");
 
 				Files.createDirectories(Paths.get(installLocation.getText()).toAbsolutePath());
 
-				String zipFileName = "1.20.2_minecraft_kaizo_edition_013_server.zip";
+				String zipFileName = Main.SERVER_ZIP_NAME + "-" + loaderVersion.name + ".zip";
 
 				Path zipFilePath = Paths.get(installLocation.getText()).toAbsolutePath().resolve(zipFileName);
 
 				Files.copy(zipInputStream, zipFilePath, StandardCopyOption.REPLACE_EXISTING);
 
 				ServerInstaller.installFromZip(Paths.get(installLocation.getText()).toAbsolutePath(), zipFilePath, this);
+
+				Files.delete(zipFilePath);
+
 				ServerPostInstallDialog.show(this);
 			} catch (Exception e) {
 				error(e);
