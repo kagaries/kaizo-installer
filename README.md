@@ -1,2 +1,3 @@
 # kaizo-installer
-The old version.
+
+Installer used for kaizo edition, thank god for the Fabric Team
