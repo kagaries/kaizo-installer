@@ -17,7 +17,7 @@
 package net.fabricmc.installer.util;
 
 public class Reference {
-	public static final String LOADER_NAME = "kaizo-edition";
+	public static final String LOADER_NAME = "magia-edition";
 
 	public static final String FABRIC_API_URL = "https://www.curseforge.com/minecraft/mc-mods/fabric-api/";
 	public static final String SERVER_LAUNCHER_URL = "https://fabricmc.net/use/server/";
